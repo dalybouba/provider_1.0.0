@@ -1,0 +1,95 @@
+
+           
+            <form #providerForm='ngForm' class="container">
+                <!-- <div class="row">
+                   <div class="col-lg-4"></div>
+                   <div class="form-group col-lg-4">
+                       <label class="container">ID</label>
+                       <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider.provider_id' placeholder="">
+                   </div>
+               </div>  -->
+                <h5>Contact</h5>
+               <div>
+                   <div class="row container">
+                       <div class="form-group col-lg-4">
+                           <label class="container">type</label>
+                           <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider?.contacts.type' placeholder="">
+                       </div>
+                   </div>
+
+                   <div>
+                       <div class="row container">
+                           <div class="form-group col-lg-2">
+                               <label class="container">street_address</label>
+                               <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider?.contacts?.address.street_address' placeholder="">
+                           </div>
+                           <div class="form-group col-lg-2">
+                               <label class="container">subdivision</label>
+                               <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider?.contacts?.address.subdivision' placeholder="">
+                           </div>
+                       </div>
+                       <div class="row container">
+                           <div class="form-group col-lg-2">
+                               <label class="container">postal_code</label>
+                               <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider?.contacts?.address.postal_code' placeholder="">
+                           </div>
+                           <div class="form-group col-lg-2">
+                               <label class="container">locality</label>
+                               <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider?.contacts?.address.locality' placeholder="">
+                           </div>
+
+                       </div>
+                       <div class="form-group col-lg-1">
+                           <label class="container">country</label>
+                           <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider?.contacts?.address.country' placeholder="">
+                       </div>
+                   </div>
+                   <div class="row container">
+                       <div class="form-group col-lg-2">
+                           <label class="container">email</label>
+                           <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider?.contacts.email' placeholder="">
+                       </div>
+                       <div class="form-group col-lg-2">
+                           <label class="container">mobile number</label>
+                           <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider?.contacts.mobile_phone_number'
+                               placeholder="">
+                       </div>
+                   </div>
+               </div>
+               <div>
+                   <div class="row container">
+                       <div class="form-group col-lg-2">
+                           <label class="container">day of week</label>
+                           <select class="form-control form-control-sm" aria-label="Default select example"
+                               name="day_of_week" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider?.opening_days_hours.day_of_week'>
+                               <option selected></option>
+                               <option *ngFor="let fileType of fileTypes"
+                               [value]="fileType">
+                         {{FileType2LabelMapping[fileType]}}
+                       </option>
+                           </select>
+                       </div>
+                       <div class="form-group col-lg-2">
+                           <label class="container">hour_periods</label>
+                           <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider?.opening_days_hours.hour_periods' placeholder="">
+                       </div>
+                   </div>
+               </div> 
+               <div class="row container">
+                   <div class="form-group col-lg-2">
+                       <label class="container">services</label>
+                       <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider.services' placeholder="">
+                   </div>
+
+                   <div class="form-group col-lg-2">
+                       <label class="container">rating</label>
+                       <input type="number" min="0" max="5" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider.rating' placeholder="">
+                   </div>
+               </div>
+               <div class="form-group col-lg-2">
+                   <label class="container">Auto assignable</label>
+                   <input type="checkbox" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel]='provider?.provider.is_auto_assignable' placeholder="">
+               </div>
+               <div class="form-group container">
+               </div>
+           </form>
