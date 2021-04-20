@@ -3,71 +3,71 @@
                     <div class="col-lg-4"></div>
                     <div class="form-group col-lg-4">
                         <label class="container">ID</label>
-                        <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]='provider.provider_id' placeholder="">
+                        <input type="text" class="form-control"  ngModel  name='provider.provider_id' placeholder="">
                     </div>
                 </div>  -->
     <h5>Contact</h5>
-    <div>
+    <div ngModelGroup="contacts">
         <div class="row container">
             <div class="form-group col-lg-4">
                 <label class="container">type</label>
-                <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"
-                    [(ngModel)]='provider?.provider?.contacts.type' placeholder="">
+                <input type="text" class="form-control" 
+                    ngModel  name='provider?.provider?.contacts.type' placeholder="">
             </div>
         </div>
 
-        <div>
+        <div ngModelGroup="address">
             <div class="row container">
                 <div class="form-group col-lg-2">
                     <label class="container">street_address</label>
-                    <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"
-                        [(ngModel)]='provider?.provider?.contacts?.address.street_address' placeholder="">
+                    <input type="text" class="form-control" 
+                        ngModel  name='street_address' placeholder="">
                 </div>
                 <div class="form-group col-lg-2">
                     <label class="container">subdivision</label>
-                    <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"
-                        [(ngModel)]='provider?.provider?.contacts?.address.subdivision' placeholder="">
+                    <input type="text" class="form-control" 
+                        ngModel  name='subdivision' placeholder="">
                 </div>
             </div>
             <div class="row container">
                 <div class="form-group col-lg-2">
                     <label class="container">postal_code</label>
-                    <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"
-                        [(ngModel)]='provider?.provider?.contacts?.address.postal_code' placeholder="">
+                    <input type="text" class="form-control" 
+                        ngModel  name='postal_code' placeholder="">
                 </div>
                 <div class="form-group col-lg-2">
                     <label class="container">locality</label>
-                    <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"
-                        [(ngModel)]='provider?.provider?.contacts?.address.locality' placeholder="">
+                    <input type="text" class="form-control" 
+                        ngModel  name='locality' placeholder="">
                 </div>
 
             </div>
             <div class="form-group col-lg-1">
                 <label class="container">country</label>
-                <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"
-                    [(ngModel)]='provider?.provider?.contacts?.address.country' placeholder="">
+                <input type="text" class="form-control" 
+                    ngModel  name='country' placeholder="">
             </div>
         </div>
         <div class="row container">
             <div class="form-group col-lg-2">
                 <label class="container">email</label>
-                <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"
-                    [(ngModel)]='provider?.provider?.contacts.email' placeholder="">
+                <input type="text" class="form-control" 
+                    ngModel  name='email' placeholder="">
             </div>
             <div class="form-group col-lg-2">
                 <label class="container">mobile number</label>
-                <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"
-                    [(ngModel)]='provider?.provider?.contacts.mobile_phone_number' placeholder="">
+                <input type="text" class="form-control" 
+                    ngModel  name='contacts.mobile_phone_number' placeholder="">
             </div>
         </div>
     </div>
-    <div>
+    <div  ngModelGroup="opening_days_hours">
         <div class="row container">
             <div class="form-group col-lg-2">
                 <label class="container">day of week</label>
                 <select class="form-control form-control-sm" aria-label="Default select example" name="day_of_week"
-                    [ngModelOptions]="{standalone: true}"
-                    [(ngModel)]='provider?.provider?.opening_days_hours.day_of_week'>
+                    
+                    ngModel  name='day_of_week'>
                     <option selected></option>
                     <option *ngFor="let fileType of fileTypes" [value]="fileType">
                         {{FileType2LabelMapping[fileType]}}
@@ -76,28 +76,28 @@
             </div>
             <div class="form-group col-lg-2">
                 <label class="container">hour_periods</label>
-                <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"
-                    [(ngModel)]='provider?.provider?.opening_days_hours.hour_periods' placeholder="">
+                <input type="text" class="form-control" 
+                    ngModel  name='hour_periods' placeholder="">
             </div>
         </div>
     </div>
     <div class="row container">
         <div class="form-group col-lg-2">
             <label class="container">services</label>
-            <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"
-                [(ngModel)]='provider?.provider.services' placeholder="">
+            <input type="text" class="form-control" 
+                ngModel  name='services' placeholder="">
         </div>
 
         <div class="form-group col-lg-2">
             <label class="container">rating</label>
-            <input type="number" min="0" max="5" class="form-control" [ngModelOptions]="{standalone: true}"
-                [(ngModel)]='provider?.provider.rating' placeholder="">
+            <input type="number" min="0" max="5" class="form-control" 
+                ngModel  name='rating' placeholder="">
         </div>
     </div>
     <div class="form-group col-lg-2">
         <label class="container">Auto assignable</label>
-        <input type="checkbox" class="form-control" [ngModelOptions]="{standalone: true}"
-            [(ngModel)]='provider?.provider.is_auto_assignable' placeholder="">
+        <input type="checkbox" class="form-control" 
+            ngModel  name='is_auto_assignable' placeholder="">
     </div>
     <div class="form-group container">
 
